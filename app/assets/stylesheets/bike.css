@@ -1,0 +1,118 @@
+body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 100;
+  background: #97ccf1;
+  text-align: center;
+}
+
+/* Banner Lettering Styles */
+h1 {
+  margin-top: 100px;
+}
+h1 [class*="word"]{
+  margin-right: 10px;
+}
+h1 [class*="word"]:last-child;{
+  margin-right: 0;
+}
+.test1 [class*="char"]{
+  font-family: 'Amatic SC', helvetica, sans-serif;
+  background: #D6665A;
+  padding: 10px;
+  font-size: 60px;
+  color: #ffffff;
+  display: inline-block;
+}
+.test1 [class*="char"]:nth-child(odd){
+  -moz-transform: skewY(-20deg);
+  -webkit-transform: skewY(-20deg);
+  -o-transform: skewY(-20deg);
+  -ms-transform: skewY(-20deg);
+  transform: skewY(-20deg);
+}
+.test1 [class*="char"]:nth-child(even){
+  background: #DC9B74;
+  color: #ffffff;
+  -moz-transform: skewY(20deg);
+  -webkit-transform: skewY(20deg);
+  -o-transform: skewY(20deg);
+  -ms-transform: skewY(20deg);
+  transform: skewY(20deg);
+}
+
+/* Bike SVG CSS*/
+.wrapper {
+  width: 50%;
+  margin: 50px auto;
+  cursor:pointer;
+  transition: transform 3s ease-out;
+}
+
+.wrapper.ride .bike {
+  animation: rideaway 3s forwards;
+}
+
+@keyframes rideaway {
+  0% {
+      transform: translate3d(0, 0, 0); 
+  } 
+  100% {
+      transform: translate3d(200%, 0, 0); 
+  }
+}
+
+@keyframes ridein {
+  0% {
+      transform: translate3d(0, 0, 0); 
+  } 
+  100% {
+      transform: translate3d(-200%, 0, 0); 
+  }
+}
+
+
+// Set the SVG to be 100% of the container
+.bike {
+  width: 100%;
+}
+
+.wheel {
+  transform-origin: 50% 50%; //rotate from the centre
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  from   { 
+    transform: rotate(0deg);
+  }
+  to { 
+    transform: rotate(360deg); 
+  }
+}
+
+.chain {
+  fill: none;
+  stroke: #fff;
+  stroke-width:2px;
+  stroke-dasharray: 5;
+  stroke-dashoffset: 5;
+  animation:movechain 0.2s normal linear infinite;
+}
+
+@keyframes movechain {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 10;
+  }
+}
+
+/* Text Content Styles */
+
+#frontpage-text {
+  font-size: 32px;
+}

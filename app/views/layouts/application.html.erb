@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BikeApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= render "partials/sitewide_assets/cssheader" %>
+    <%= stylesheet_link_tag "bike.css", :media => 'screen' %>
+  </head>
+
+  <body>
+    <%= render "partials/sitewide_assets/navbar" %>
+    <%= render "partials/sitewide_assets/flash" %>
+
+    <%= yield %>
+
+    <%= render "partials/sitewide_assets/jslinks" %>
+  </body>
+</html>

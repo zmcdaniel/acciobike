@@ -1,0 +1,22 @@
+<!-- jQuery plugin for lettering manipulation -->
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.js'></script>
+
+<!-- Bootstrap JS -->
+<script type="text/javascript" src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+<!-- Stufff for making the frontpage bike move. MOVE ME INTO A SEPERATE FILE. -->
+<script type="text/javascript">
+    $(window).load(function(){
+        $(".test1").lettering("words").children('span').lettering();
+     });
+
+    $(document).ready(function() {
+      ride();
+    });
+
+    function ride() {
+      $('.wrapper').click(function() {
+        $(this).toggleClass('ride');
+      });
+    }
+</script>
