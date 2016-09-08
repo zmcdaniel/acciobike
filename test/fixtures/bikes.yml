@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  brand: MyString
+  model: MyString
+  color_primary: MyString
+  color_secondary: MyString
+  color_tertiary: MyString
+  serial_num: MyString
+  is_stolen: false
+  stolen_zip: 1
+  stolen_date: MyString
+  photo: MyText
+  frame_size: MyString
+
+two:
+  description: MyText
+  brand: MyString
+  model: MyString
+  color_primary: MyString
+  color_secondary: MyString
+  color_tertiary: MyString
+  serial_num: MyString
+  is_stolen: false
+  stolen_zip: 1
+  stolen_date: MyString
+  photo: MyText
+  frame_size: MyString
