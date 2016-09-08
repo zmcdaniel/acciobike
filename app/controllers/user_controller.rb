@@ -4,8 +4,8 @@ class UserController < ApplicationController
   end
 
   def create
-  User.create(user_params)
-   redirect_to root_path
+    User.create(user_params)
+    redirect_to root_path
   end
 
   def edit
@@ -22,7 +22,7 @@ class UserController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id]) #This works!
+    @user = User.find(params[:id])
   end
 
   def user_params
