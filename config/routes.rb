@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
+  # get 'user/index'
+
+  # get 'user/create'
+
+  # get 'user/edit'
+
+  # get 'user/update'
+
+  # get 'user/new'
+
+  # get 'user/destroy'
+
+  # get 'user/show'
+
   root 'home#index'
+
+  resources :user
 
   get "login" => "sessions#new"
 
