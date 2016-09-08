@@ -25,5 +25,13 @@ Rails.application.routes.draw do
 
   get "about" => "home#about"
 
+  get "chris" => "home#chris"
+
+  get "zoe" => "home#zoe"
+
+  get "kemal" => "home#kemal"
+
+  get "jackson" => "home#jackson"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
