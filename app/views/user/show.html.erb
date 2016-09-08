@@ -1,1 +1,24 @@
-<%= @user.name %>
+<div class='container'>
+
+    <div class='col-md-3 well' id='user-info'>
+
+                <h3>Hello, <%= @user.name %></h3>
+                <label>Email: </label> <%= @user.email %>
+    </div>
+
+    <div class='col-md-1'></div>
+
+    <div class='col-md-7 well' id='user-bikes'>
+
+        <h3>Your registered bikes:</h3>
+
+            <ul id='bike-list'>
+
+                <li><a href='#'>Bike 1</a></li>
+                <li><a href='#'>Bike 2</a></li>
+
+            </ul>
+
+    </div>
+
+</div>
