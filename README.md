@@ -1,6 +1,9 @@
 # Accio Bike
 
-A registry for your bicycle to proactively prevent and recover from bike thefts.
+#### A registry for your bicycle to proactively prevent and recover from bike thefts.
+
+## About
+
 Without creating an account, a user can search the database of missing bikes for
 information like a bicycle's unique serial number, brand, model, color, size, 
 or the zip code from which it went missing. If your bike has gone missing, create 
@@ -39,3 +42,12 @@ recovered bicycle.
 increase visibility and possibility of recovery.
 * As a person who recently found an abandoned bike, I want to know if this is a missing bike and how to return it.
 
+## Wireframes
+
+To be added
+
+## Approach Taken
+
+To be added
+
+## 
