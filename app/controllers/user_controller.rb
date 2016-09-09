@@ -23,6 +23,7 @@ class UserController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @bikes = @user.bikes
   end
 
   def user_params
