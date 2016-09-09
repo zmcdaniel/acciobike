@@ -19,7 +19,9 @@
       <li class="navbar-right"><a href="/logout" style="color: white">Logout</a></li>
       <li class="navbar-right"><a href="/login" style="color: white">Login</a></li>
       <li class="navbar-right"><a href="/user" style="color: white">Signup</a></li>
-      <li class="navbar-right"><a href="/user/1" style="color: white">Profile</a></li>
+      <% if @current_user%>
+      <li class="navbar-right"><a href="/user/<%=@current_user.id%>" style="color: white">Profile</a></li>
+      <%end%>
 
     </ul>
 
