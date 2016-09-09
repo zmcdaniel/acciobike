@@ -9,9 +9,6 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       flash[:success] = "#{user.name} logged in!!"
       redirect_to root_path
-      puts '######################'
-      puts @current_user
-       puts '######################'
     else
       flash[:danger] = "Credentials Invalid!!"
       redirect_to login_path
