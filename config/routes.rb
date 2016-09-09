@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  # get 'bike/show'
+
+  # get 'bike/new'
+
+  # get 'bike/create'
+
+  # get 'bike/edit'
+
+  # get 'bike/update'
+
+  # get 'bike/delete'
+
+  # get 'bike/destroy'
+
+  resources :bike
+
   # get 'user/index'
 
   # get 'user/create'

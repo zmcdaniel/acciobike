@@ -116,3 +116,8 @@ h1 [class*="word"]:last-child;{
 #frontpage-text {
   font-size: 32px;
 }
+
+#createBikePage {
+  text-align: left;
+
+}
