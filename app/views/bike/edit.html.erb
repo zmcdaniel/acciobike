@@ -1,2 +1,53 @@
-<h1>Bike#edit</h1>
-<p>Find me in app/views/bike/edit.html.erb</p>
+<div class="bikeForm">
+  
+<h1>Edit bike info</h1>
+
+<%= form_tag(bike_path, method: "patch") %>
+<%= form_for :bike do |form| %>
+<%= form.label :brand %>
+<%= form.text_field :brand %>
+<br><br>
+<%= form.label :model %>
+<%= form.text_field :model %>
+<br><br>
+<%= form.label :serialnumber %>
+<br>
+<%= form.text_field :serial_num %>
+
+
+<br><br>
+<%= form.label :Primarycolor %>
+<br>
+<%= form.text_field :color_primary %>
+<br><br>
+<%= form.label :Secondcolor %>
+<br>
+<%= form.text_field :color_secondary %>
+<br><br>
+<%= form.label :Thirdcolor %>
+<br>
+<%= form.text_field :color_tertiary %>
+
+
+<br><br>
+<%= form.radio_button(:is_stolen, true) %>
+<%= form.label(:bike_true, "My bike was stolen") %>
+<%= form.radio_button(:is_stolen, false) %>
+<%= form.label(:bike_false, "My bike was not stolen") %>
+
+
+<span class="photoInput">
+  <br><br>
+  <%= form.label :photo %>
+  <%= form.file_field :photo %>
+</span>
+
+<br><br>
+<%= form.label :description %>
+<br>
+<%= form.text_area :description %>
+<br><br>
+<%= form.submit %>
+<%end%>
+
+</div>
