@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     user = User.authenticate(user_params)
 
-    if user
+    if user || :current_user
       session[:user_id] = user.id
       flash[:success] = "#{user.name} logged in!!"
       redirect_to root_path

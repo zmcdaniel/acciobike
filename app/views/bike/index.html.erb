@@ -1,3 +1,4 @@
+<!-- <script type="text/javascript" src="/partials/bikeMenu.js"></script> -->
 <div class="bikeForm">
   
 <h1>Add a bike</h1>
@@ -29,9 +30,9 @@
 
 
 <br><br>
-<%= form.radio_button(:is_stolen, true) %>
+<%= form.radio_button(:is_stolen, true, {:class => "true_clicked"}) %>
 <%= form.label(:bike_true, "My bike was stolen") %>
-<%= form.radio_button(:is_stolen, false) %>
+<%= form.radio_button(:is_stolen, false, {:class => "false_clicked"}) %>
 <%= form.label(:bike_false, "My bike was not stolen") %>
 
 
