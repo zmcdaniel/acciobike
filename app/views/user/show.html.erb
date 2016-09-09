@@ -22,20 +22,19 @@
 
         <div class="user-bikes" style="border: 2px solid #66CCFF; padding: 10px; margin: 20px; border-radius: 5px;">
             <div class="row">
-                    <div class="col-md-6">
-                        <img src="<%= bike.photo %>" class="img-thumbnail" width=200>
-                    </div>
-                    <div class="col-md-6" style="text-align: left;">
-                        <h4><a href="/bike/<%= bike.id %>"><%= bike.serial_num %></a></h4>
-                        <h6><label>Brand: </label> <%= bike.brand %></h6>
-                        <h6><label>Model: </label> <%= bike.model %></h6>
-                        <h6><label>Is Missing: </label> <%= bike.is_stolen %></h6>
-                        <a class="btn btn-primary btn-sm" href='#'>Edit</a>
-                        <a class="btn btn-danger btn-sm" href='#'>Delete</a>
-                    </div>
-
+                <div class="col-md-6">
+                    <img src="<%= bike.photo %>" class="img-thumbnail" width=200>
+                </div>
+                <div class="col-md-6" style="text-align: left;">
+                    <h4><a href="/bike/<%= bike.id %>"><%= bike.serial_num %></a></h4>
+                    <h6><label>Brand: </label> <%= bike.brand %></h6>
+                    <h6><label>Model: </label> <%= bike.model %></h6>
+                    <h6><label>Is Missing: </label> <%= bike.is_stolen %></h6>
+                    <a class="btn btn-primary btn-sm" href='/bike/<%= bike.id %>/edit'>Edit</a>
+                    <a class="btn btn-danger btn-sm" href='#'>Delete</a>
                 </div>
             </div>
+        </div>
 
         <% end %>
 
