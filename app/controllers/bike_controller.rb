@@ -31,6 +31,7 @@ class BikeController < ApplicationController
   def delete
   end
 
+
   def destroy
     bike = Bike.find(params[:id])
     bike.delete
