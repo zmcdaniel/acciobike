@@ -117,7 +117,7 @@ h1 [class*="word"]:last-child;{
   font-size: 32px;
 }
 
-#createBikePage {
+.bikeForm {
   text-align: left;
 
 }
