@@ -1,6 +1,6 @@
-<div id="createBikePage">
+<div class="bikeForm">
   
-<h1>Bike#index</h1>
+<h1>Add a bike</h1>
 
 <%= form_for :bike do |form| %>
 <%= form.label :brand %>
@@ -35,7 +35,7 @@
 <%= form.label(:bike_false, "My bike was not stolen") %>
 
 
-<span id="photoInput">
+<span class="photoInput">
   <br><br>
   <%= form.label :photo %>
   <%= form.file_field :photo %>

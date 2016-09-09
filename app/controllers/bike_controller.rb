@@ -19,9 +19,13 @@ class BikeController < ApplicationController
   end
 
   def edit
+    @bike = Bike.find(params[:id])
   end
 
   def update
+    b = Bike.find(params[:id])
+    b.update(bike_params)
+    redirect_to root_path
   end
 
   def delete
@@ -30,8 +34,10 @@ class BikeController < ApplicationController
   def destroy
   end
 
+  private
+
   def bike_params
     defaults = { user_id: current_user.id }
-   params.require(:bike).permit(:user_id, :description, :brand, :model, :color_primary, :color_secondary, :color_tertiary, :serial_num, :is_stolen, :stolen_zip, :stolen_date, :photo, :frame_size).reverse_merge(defaults)
+   params.require(:bike).permit(:user_id, :description, :brand, :model, :color_primary, :color_secondary, :color_tertiary, :serial_num, :is_stolen, :stolen_zip, :stolen_date, :photo, :frame_size)#.reverse_merge(defaults)
   end
 end
