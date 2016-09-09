@@ -135,3 +135,13 @@ transform: skewY(20deg);
     padding-right: 20px;
     text-align: center;
 }
+
+/* Styles for user profile page */
+
+.user-bikes {
+    border: 2px solid #66CCFF;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
