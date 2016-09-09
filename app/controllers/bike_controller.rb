@@ -33,9 +33,9 @@ class BikeController < ApplicationController
 
 
   def destroy
-    bike = Bike.find(params[:id])
-    bike.delete
-    redirect_to bikes_path
+    Bike.find(params[:id]).delete
+    redirect_to root_path
+
   end
 
   private
