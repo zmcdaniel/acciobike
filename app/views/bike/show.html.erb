@@ -1,2 +1,46 @@
-<h1>Bike#show</h1>
-<p>Find me in app/views/bike/show.html.erb</p>
+<div class='container'>
+
+    <div class="row">
+        <div class="col-md-4" id="bike-image">
+            <img src="<%= @bike.photo %>" width=400 class="img-rounded responsive">
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-7 well" id="bike-info" style="text-align: left;">
+
+            <h3>
+                <label>Brand:</label>
+                <%= @bike.brand %>
+            </h3>
+
+            <h3>
+                <label>Model:</label>
+                <%= @bike.model %>
+            </h3>
+
+            <h3>
+                <label>Serial Number:</label>
+                <%= @bike.serial_num %>
+            </h3>
+
+            <div class="col-md-6">
+                <label>Colors:</label>
+                    <ul>
+                        <li>Primary: <strong><span style="color: <%= @bike.color_primary %>"><%= @bike.color_primary %></span></strong></li>
+                        <li>Secondary: <strong><span style="color: <%= @bike.color_secondary %>"><%= @bike.color_secondary %></span></strong></li>
+                        <li>Tertiary: <strong><span style="color: <%= @bike.color_tertiary %>"><%= @bike.color_tertiary %></span></strong></li>
+                    </ul>
+            </div>
+
+            <div class="col-md-6">
+                <label>Desciption and addition details: </label>
+                <p>
+                    <%= @bike.description %>
+                </p>
+            </div>
+
+        </div>
+
+</div>
+    </div>
