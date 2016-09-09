@@ -1,2 +1,71 @@
-<h1>Bike#show</h1>
-<p>Find me in app/views/bike/show.html.erb</p>
+<div class='container'>
+
+    <div class="row">
+        <div class="col-md-4" id="bike-image">
+            <img src="<%= @bike.photo %>" width=400 class="img-rounded responsive">
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-7 well" id="bike-info" style="text-align: left;">
+
+            <h3>
+                <label>Brand:</label>
+                <%= @bike.brand %>
+            </h3>
+
+            <h3>
+                <label>Model:</label>
+                <%= @bike.model %>
+            </h3>
+
+            <h3>
+                <label>Serial Number:</label>
+                <%= @bike.serial_num %>
+            </h3>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Colors:</label>
+                    <ul>
+                        <li>Primary: <strong><span style="color: <%= @bike.color_primary %>"><%= @bike.color_primary %></span></strong>
+                        </li>
+                        <li>Secondary: <strong><span style="color: <%= @bike.color_secondary %>"><%= @bike.color_secondary %></span></strong>
+                        </li>
+                        <li>Tertiary: <strong><span style="color: <%= @bike.color_tertiary %>"><%= @bike.color_tertiary %></span></strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <label>Status:</label>
+                    <ul>
+                        <li>Missing: <%= @bike.is_stolen %></li>
+                        <li>Last known location: <%= @bike.stolen_zip %></li>
+                        <li>Last seen date: <%= @bike.stolen_date %></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Desciption and additional details:</label>
+                    <p>
+                        <%= @bike.description %>
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row" id="contact-owner">
+                <a href="#">contact owner</a>
+                |
+                <a href="#">return</a>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
