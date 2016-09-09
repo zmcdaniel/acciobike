@@ -29,10 +29,10 @@
 
 
 <br><br>
-<%= radio_button_tag(:is_stolen, true) %>
-<%= label_tag(:bike_true, "My bike was stolen") %>
-<%= radio_button_tag(:is_stolen, false) %>
-<%= label_tag(:bike_false, "My bike was not stolen") %>
+<%= form.radio_button(:is_stolen, true) %>
+<%= form.label(:bike_true, "My bike was stolen") %>
+<%= form.radio_button(:is_stolen, false) %>
+<%= form.label(:bike_false, "My bike was not stolen") %>
 
 
 <span id="photoInput">
