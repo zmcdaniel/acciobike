@@ -10,15 +10,12 @@ class BikeController < ApplicationController
 
   def index
     @users = User.all
-    puts '------------------'
-    puts current_user.inspect
-    puts '------------------'
 
   end
 
   def create
     Bike.create(bike_params)
-   redirect_to root_path
+    redirect_to root_path
   end
 
   def edit
