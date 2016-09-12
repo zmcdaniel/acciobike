@@ -2,10 +2,7 @@
 
     <div class="row">
         <div class="col-md-4" id="bike-image">
-            <img src="<%= cl_image_tag(@bike.photo,
-                        :width => 400,
-                        :class => img-thumbnail responsive)
-                        %>">
+            <%= cl_image_tag(@bike.photo, :width => 400, :class => 'img-thumbnail') %>
 
         <div class="col-md-1"></div>
 

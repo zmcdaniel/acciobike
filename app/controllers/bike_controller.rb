@@ -27,7 +27,7 @@ class BikeController < ApplicationController
         :stolen_zip         => bike_params[:stolen_zip],
         :stolen_date        => bike_params[:stolen_date],
         :description        => bike_params[:description],
-        :picture            => cloudinary_file['public_id'],
+        :photo            => cloudinary_file['public_id'],
         :frame_size         => bike_params[:frame_size]
     }
     Bike.create(new_bike)
