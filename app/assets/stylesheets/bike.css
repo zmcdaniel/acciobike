@@ -54,11 +54,11 @@ transform: skewY(20deg);
 }
 
 .wrapper.ride .bike {
-    animation: rideaway 3s forwards;
+    animation: rideout 3s forwards;
 }
 
 /* Animation to ride out on click*/
-@keyframes rideaway {
+@keyframes rideout {
     0% {
         transform: translate3d(0, 0, 0);
     }
@@ -83,7 +83,7 @@ transform: skewY(20deg);
 
 .wheel {
     transform-origin: 50% 50%;
-/ / rotate from the centre animation: spin 2 s infinite linear;
+    animation: spin 2s infinite linear;
 }
 
 @keyframes spin {
