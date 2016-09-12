@@ -1,64 +1,61 @@
-<!-- <script type="text/javascript" src="/partials/bikeMenu.js"></script> -->
 <div class="bikeForm">
-  
-<h1>Add a bike</h1>
 
-<%= form_for :bike do |form| %>
-<%= form.label :brand %>
-<%= form.text_field :brand %>
-<br><br>
-<%= form.label :model %>
-<%= form.text_field :model %>
-<br><br>
-<%= form.label :serialnumber %>
-<br>
-<%= form.text_field :serial_num %>
+    <h1>Add a bike</h1>
 
-
-<br><br>
-<%= form.label :Primarycolor %>
-<br>
-<%= form.text_field :color_primary %>
-<br><br>
-<%= form.label :Secondcolor %>
-<br>
-<%= form.text_field :color_secondary %>
-<br><br>
-<%= form.label :Thirdcolor %>
-<br>
-<%= form.text_field :color_tertiary %>
+    <%= form_for :bike do |form| %>
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+    <br><br>
+    <%= form.label :model %>
+    <%= form.text_field :model %>
+    <br><br>
+    <%= form.label :serialnumber %>
+    <br>
+    <%= form.text_field :serial_num %>
 
 
-<br><br>
-<%= form.radio_button(:is_stolen, true, {:class => "true_clicked"}) %>
-<%= form.label(:bike_true, "My bike was stolen") %>
-<%= form.radio_button(:is_stolen, false, {:class => "false_clicked"}) %>
-<%= form.label(:bike_false, "My bike was not stolen") %>
+    <br><br>
+    <%= form.label :Primarycolor %>
+    <br>
+    <%= form.text_field :color_primary %>
+    <br><br>
+    <%= form.label :Secondcolor %>
+    <br>
+    <%= form.text_field :color_secondary %>
+    <br><br>
+    <%= form.label :Thirdcolor %>
+    <br>
+    <%= form.text_field :color_tertiary %>
 
-<div class="stolen_form" style="display: none">
-  <br>
-  <%= form.label :stolen_zip %>
-  <br>
-  <%= form.text_field :stolen_zip %>
-  <br><br>
-  <%= form.label :stolen_date %>
-  <br>
-  <%= form.text_field :stolen_date %>
-  <br>
-</div>
 
-<span class="photoInput">
-  <br><br>
-  <%= form.label :photo %>
-  <%= form.file_field :photo %>
-</span>
+    <br><br>
+    <%= form.radio_button(:is_stolen, true, {:class => "true_clicked"}) %>
+    <%= form.label(:bike_true, "My bike was stolen") %>
+    <%= form.radio_button(:is_stolen, false, {:class => "false_clicked"}) %>
+    <%= form.label(:bike_false, "My bike was not stolen") %>
 
-<br><br>
-<%= form.label :description %>
-<br>
-<%= form.text_area :description %>
-<br><br>
-<%= form.submit %>
-<%end%>
+    <div class="stolen_form" style="display: none">
+        <br>
+        <%= form.label :stolen_zip %>
+        <br>
+        <%= form.text_field :stolen_zip %>
+        <br><br>
+        <%= form.label :stolen_date %>
+        <br>
+        <%= form.text_field :stolen_date %>
+        <br>
+    </div>
+
+    <br><br>
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
+
+    <br><br>
+    <%= form.label :description %>
+    <br>
+    <%= form.text_area :description %>
+    <br><br>
+    <%= form.submit %>
+    <%end%>
 
 </div>
