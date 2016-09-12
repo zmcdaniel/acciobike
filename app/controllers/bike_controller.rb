@@ -15,6 +15,9 @@ class BikeController < ApplicationController
 
   def create
     Bike.create(bike_params)
+    puts "####################################"
+    puts bike_params[:photo].inspect
+    puts "####################################"
     redirect_to root_path
   end
 
