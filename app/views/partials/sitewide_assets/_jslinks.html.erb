@@ -4,7 +4,7 @@
 <!-- Bootstrap JS -->
 <script type="text/javascript" src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
 
-<!-- Stufff for making the frontpage bike move. MOVE ME INTO A SEPERATE FILE. -->
+<!-- Stufff for making the frontpage bike move. -->
 <script type="text/javascript">
     $(window).load(function(){
         $(".test1").lettering("words").children('span').lettering();
@@ -19,13 +19,12 @@
         $(this).toggleClass('ride');
       });
     }
-</script>
 
-<script>
-$(".true_clicked").on("click", function(){
-  $(".stolen_form").css("display", "inline");
-});
-$(".false_clicked").on("click", function(){
-  $(".stolen_form").css("display", "none");
-});
+    $(".true_clicked").on("click", function(){
+        $(".stolen_form").css("display", "inline");
+    });
+
+    $(".false_clicked").on("click", function(){
+        $(".stolen_form").css("display", "none");
+    });
 </script>
