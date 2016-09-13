@@ -16,7 +16,7 @@
 
     <div class="md-form">
         <%= form.text_field :serial_num, class: 'form-control', id: 'serial_num' %>
-        <%= form.label :serial_num, class: '', for: 'serial_num' %>
+        <%= form.label :serial_number, class: '', for: 'serial_num' %>
     </div>
 
     <br><br>
@@ -100,10 +100,11 @@
     <%= form.label :photo %>
     <%= form.file_field :photo %>
 
-    <br><br>
-    <%= form.label :description %>
-    <br>
-    <%= form.text_area :description %>
+    <div class="md-form">
+        <%= form.text_area :description, class: 'form-control', id: 'description' %>
+        <%= form.label :description, class: '', for: 'description' %>
+    </div>
+
     <br><br>
     <%= form.submit %>
     <%end%>
