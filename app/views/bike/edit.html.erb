@@ -1,11 +1,15 @@
-<div class="bikeForm">
-  
-<h1>Edit bike info</h1>
+<div class="bikeForm container well">
 
+    <%= form_for @bike do |form| %>
 
-<%= form_for @bike do |form| %>
-<%= form.label :brand %>
-<%= form.text_field :brand %>
+    <h1>Edit bike info</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mui-textfield ">
+                <%= form.label :brand %>
+                <%= form.text_field :brand %>
+                </div></div></div>
 <br><br>
 <%= form.label :model %>
 <%= form.text_field :model %>
