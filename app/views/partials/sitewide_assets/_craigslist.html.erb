@@ -1,6 +1,11 @@
-<h4>Possible craigslist matches</h4>
+
 <p>
-  <% @titles.each do |title|%>
-  <%=title%>
-  <%end %>
+  <%if @titles != nil%>
+    <h4>Possible craigslist matches</h4>
+    <%5.times do |i|%>
+      <a href="https://seattle.craigslist.org<%=@links[i] %>"><%=@titles[i]%></a>
+    <%end%>
+   <%else%>
+    <h3>No matches on craigslist :(</h3> 
+  <%end%>
 </p>

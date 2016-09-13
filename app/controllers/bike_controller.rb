@@ -1,27 +1,27 @@
 class BikeController < ApplicationController
-       # require the gems we need
-      require 'rest-client'
-      require 'nokogiri'
+  # require the gems we need
+  require 'rest-client'
+  require 'nokogiri'
+
   before_action :current_user, :is_authenticated
+
   def show
      @bike = Bike.find(params[:id])
+    #request data
+    response = RestClient.get("https://seattle.craigslist.org/search/bia")
+    html = response.body
+    #give Nokogiri your file
+    data = Nokogiri::HTML(html)
+    ##select data using CSS selectors
+    titleArr = []
+    linkArr = []
+    data.css("a.hdrlnk:contains('#{@bike.brand}')", "a.hdrlnk:contains('#{@bike.model}')", "a.hdrlnk:contains('#{@bike.color_primary}')").each do |title|
+      titleArr = titleArr.push(title.text)
+      @titles = titleArr
 
-
-      #request data
-      response = RestClient.get("https://seattle.craigslist.org/search/bia")
-      html = response.body
-      #give Nokogiri your file
-      data = Nokogiri::HTML(html)
-      ##select data using CSS selectors
-      data.css("a.hdrlnk").each do |title|
-        @titles[] = title.text
-        puts title.text
-        puts '################'
-      end
-
-      #puts data.css("p.row a span.price")[0] ###This gets the price of first bike
-      # puts data.css("p.row a.i.gallery")[0] ##This gets the whole first <a> tag
-      #puts data.css("div.swipe")[0].text
+      linkArr = linkArr.push(title.attr('href'))
+      @links = linkArr
+    end
   end
 
   def new
