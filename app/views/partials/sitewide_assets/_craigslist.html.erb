@@ -1,4 +1,6 @@
 <h4>Possible craigslist matches</h4>
 <p>
-  <%=@titles%>
+  <% @titles.each do |title|%>
+  <%=title%>
+  <%end %>
 </p>
