@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20160907174547) do
     t.string   "color_secondary"
     t.string   "color_tertiary"
     t.string   "serial_num"
-    t.boolean  "is_stolen"
+    t.text     "is_stolen"
     t.integer  "stolen_zip"
     t.string   "stolen_date"
     t.text     "photo"
