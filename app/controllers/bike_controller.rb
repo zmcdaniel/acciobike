@@ -55,6 +55,18 @@ class BikeController < ApplicationController
 
   end
 
+  def results
+    query = params[:search]
+    if query
+      @bikes = Bike.search(query)
+    else
+      @bikes = Bike.all
+    end
+  end
+
+
+
+
   private
 
   def bike_params
