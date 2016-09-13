@@ -66,6 +66,9 @@
         </div>
 
     </div>
+    <%if @bike.is_stolen == true%>
+    <%= render "partials/sitewide_assets/craigslist" %>
+    <%end%>
 
 
 </div>
