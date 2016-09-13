@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="page-heading mui--text-light mui--text-display1">
-        Sign up, buddy
+        Sign up
     </div>
 
     <div class="form-section panel container" style="padding-top: 20px; text-align: left;">
@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="mui-textfield">
-                    <%= form.text_field :name, class: 'form-control', id: 'name' %>
+                    <%= form.text_field :name, class: '', id: 'name' %>
                     <%= form.label :name, class: '', for: 'name' %>
                 </div>
             </div>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="mui-textfield">
-                    <%= form.text_field :email, class: 'form-control', id: 'email' %>
+                    <%= form.text_field :email, class: 'f', id: 'email' %>
                     <%= form.label :email, class: '', for: 'email' %>
                 </div>
             </div>
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="mui-textfield">
-                    <%= form.text_field :password, class: 'form-control', id: 'password' %>
+                    <%= form.password_field :password, class: '', id: 'password' %>
                     <%= form.label :password, class: '', for: 'password' %>
                 </div>
             </div>

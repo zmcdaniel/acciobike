@@ -23,6 +23,9 @@ else's stolen property.
 * CoffeeScript
 * PostgreSQL (via Interactive Ruby Shell)
 * Active Record 
+* Bootstrap
+* Font Awesome Icons
+* Material UI library and framework
 
 ## Team Members
 
@@ -48,6 +51,18 @@ To be added
 
 ## Approach Taken
 
-To be added
+We decided early-on to build an app that had a unique niche of dedicated users. Most importantly, we focused 
+on creating a service that we would use and was relevant. Seattle is a bike-centric city, which unfortunately also
+makes it a target for bicycles thieves. After reading about Bike Batman, the Seattle vigilante who scours Craigslist 
+ads for stolen bikes being flipped for a quick buck, we settled on a registry that could help the recover and prevent 
+bike-related crimes.
+
+Whiteboarding wireframes/ERD diagrams and clearly outlining our CRUD functionality kept the project organized and 
+merge conflicts minimal, as everyone had a clearly delegated job. We separated components into self-contained partials 
+which allowed group members to tackle features displayed on the same page. 
+
+Keeping organized with a clear vision of our minimum viable product allowed us to quickly and efficiently dial in our 
+required features and move on to the fun stuff. We had time to try our hands at Cloudinary image uploads, interactive 
+jQuery forms Nokogiri data scraping, SVG/CSS animations, and a hand-coded search function.
 
 ## 

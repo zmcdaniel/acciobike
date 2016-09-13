@@ -1,10 +1,13 @@
 <div class="container">
 
-    <%= form_for :bike do |form| %>
-
-    <div class="page-heading mui--text-light mui--text-display1">Log In, buddy</div>
+    <div class="page-heading mui--text-light mui--text-display1">
+        Log In
+    </div>
 
     <div class="form-section panel container" style="padding-top: 20px; text-align: left;">
+
+        <%= form_for :user do |form| %>
+
 
         <div class="row" style="text-align: left;">
             <div class="col-md-6">
@@ -24,6 +27,6 @@
 
     </div>
 
-    <%= form.submit 'SIGN UP', :class => 'mui-btn mui-btn--primary' %>
+    <%= form.submit 'LOG IN', :class => 'mui-btn mui-btn--primary' %>
     <%end%>
 </div>
