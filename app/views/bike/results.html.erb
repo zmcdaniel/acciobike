@@ -1,10 +1,32 @@
+<div class='container'>
 
-<% @bikes.each do |bike| %>
-  <h3><%= bike.brand %></h3>
-  <h3><%= bike.model %></h3>
-  <h3><%= bike.color_primary %></h3>
-  <h3><%= bike.color_secondary %></h3>
-  <h3><%= bike.description %></h3>
-  <h3> ============= </h3>
+    <div class='col-md-1'></div>
 
-<% end %>
+    <div class='col-md-7 well' id='user-bikes'>
+
+        <h3>Searched Bikes:</h3>
+
+        <% @bikes.each do |bike| %>
+
+        <div class="user-bikes">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <%= cl_image_tag(bike.photo, :width => 250, :class => 'img-thumbnail img-responsive') %>
+                </div>
+
+                <div class="col-md-6">
+                    <h4><a href="/bike/<%= bike.id %>"><%= bike.serial_num %></a></h4>
+                    <h6><label>Brand: </label> <%= bike.brand %></h6>
+                    <h6><label>Model: </label> <%= bike.model %></h6>
+                    <h6><label>Is Missing: </label> <%= bike.is_stolen %></h6>
+
+                </div>
+            </div>
+        </div>
+
+        <% end %>
+
+    </div>
+
+</div>
