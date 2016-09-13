@@ -4,79 +4,101 @@
 
     <%= form_for :bike do |form| %>
 
-    <div class="md-form">
-        <%= form.text_field :brand, class: 'form-control', id: 'brand' %>
-        <%= form.label :brand, class: '', for: 'brand' %>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mui-textfield">
+                <%= form.text_field :brand, class: 'form-control', id: 'brand' %>
+                <%= form.label :brand, class: '', for: 'brand' %>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="mui-textfield">
+                <%= form.text_field :model, class: 'form-control', id: 'model' %>
+                <%= form.label :model, class: '', for: 'model' %>
+            </div>
+        </div>
     </div>
 
-    <div class="md-form">
-        <%= form.text_field :model, class: 'form-control', id: 'model' %>
-        <%= form.label :model, class: '', for: 'model' %>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mui-textfield">
+                <%= form.text_field :serial_num, class: 'form-control', id: 'serial_num' %>
+                <%= form.label :serial_number, class: '', for: 'serial_num' %>
+            </div>
+        </div>
     </div>
 
-    <div class="md-form">
-        <%= form.text_field :serial_num, class: 'form-control', id: 'serial_num' %>
-        <%= form.label :serial_number, class: '', for: 'serial_num' %>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mui-select">
+                <%= form.label :Primary_color %>
+                <%= form.select :color_primary, [
+                ['None', 'none'],
+                ['Red','red'],
+                ['Dark Red', 'dark red'],
+                ['Light Red', 'light red'],
+                ['Blue','blue'],
+                ['Dark Blue','dark blue'],
+                ['Light Blue','light blue'],
+                ['Green','green'],
+                ['Dark Green','dark green'],
+                ['Light Green','light green'],
+                ['Yellow','yellow'],
+                ['Orange','orange'],
+                ['White','white'],
+                ['Black', 'black'],
+                ['Grey','grey'],
+                ['Purple','purple']] %>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mui-select">
+                <%= form.label :Secondary_color %>
+                <%= form.select :color_secondary, [
+                ['None', 'none'],
+                ['Red','red'],
+                ['Dark Red', 'dark red'],
+                ['Light Red', 'light red'],
+                ['Blue','blue'],
+                ['Dark Blue','dark blue'],
+                ['Light Blue','light blue'],
+                ['Green','green'],
+                ['Dark Green','dark green'],
+                ['Light Green','light green'],
+                ['Yellow','yellow'],
+                ['Orange','orange'],
+                ['White','white'],
+                ['Black', 'black'],
+                ['Grey','grey'],
+                ['Purple','purple']] %>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mui-select">
+                <%= form.label :Tertiary_color %>
+                <%= form.select :color_tertiary, [
+                ['None', 'none'],
+                ['Red','red'],
+                ['Dark Red', 'dark red'],
+                ['Light Red', 'light red'],
+                ['Blue','blue'],
+                ['Dark Blue','dark blue'],
+                ['Light Blue','light blue'],
+                ['Green','green'],
+                ['Dark Green','dark green'],
+                ['Light Green','light green'],
+                ['Yellow','yellow'],
+                ['Orange','orange'],
+                ['White','white'],
+                ['Black', 'black'],
+                ['Grey','grey'],
+                ['Purple','purple']] %>
+            </div>
+        </div>
     </div>
-
-    <br><br>
-    <%= form.label :Primarycolor %>
-    <%= form.select :color_primary, [['Red','red'],
-    ['Dark Red', 'dark red'],
-    ['Light Red', 'light red'],
-    ['Blue','blue'],
-    ['Dark Blue','dark blue'],
-    ['Light Blue','light blue'],
-    ['Green','green'],
-    ['Dark Green','dark green'],
-    ['Light Green','light green'],
-    ['Yellow','yellow'],
-    ['Orange','orange'],
-    ['White','white'],
-    ['Black', 'black'],
-    ['Grey','grey'],
-    ['Purple','purple']] %>
-
-
-
-    <br><br>
-    <%= form.label :Secondcolor %>
-    <%= form.select :color_secondary, [['Red','red'],
-    ['Dark Red', 'dark red'],
-    ['Light Red', 'light red'],
-    ['Blue','blue'],
-    ['Dark Blue','dark blue'],
-    ['Light Blue','light blue'],
-    ['Green','green'],
-    ['Dark Green','dark green'],
-    ['Light Green','light green'],
-    ['Yellow','yellow'],
-    ['Orange','orange'],
-    ['White','white'],
-    ['Black', 'black'],
-    ['Grey','grey'],
-    ['Purple','purple']] %>
-
-    <br><br>
-    <%= form.label :Thirdcolor %>
-    <%= form.select :color_tertiary, [['Red','red'],
-    ['Dark Red', 'dark red'],
-    ['Light Red', 'light red'],
-    ['Blue','blue'],
-    ['Dark Blue','dark blue'],
-    ['Light Blue','light blue'],
-    ['Green','green'],
-    ['Dark Green','dark green'],
-    ['Light Green','light green'],
-    ['Yellow','yellow'],
-    ['Orange','orange'],
-    ['White','white'],
-    ['Black', 'black'],
-    ['Grey','grey'],
-    ['Purple','purple']] %>
-
-
-
 
     <br><br>
     <%= form.radio_button(:is_stolen, true, {:class => "true_clicked"}) %>
@@ -104,7 +126,6 @@
         <%= form.text_area :description, class: 'form-control', id: 'description' %>
         <%= form.label :description, class: '', for: 'description' %>
     </div>
-
     <br><br>
     <%= form.submit %>
     <%end%>
