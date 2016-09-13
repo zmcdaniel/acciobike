@@ -32,9 +32,8 @@
                     <h6><label>Brand: </label> <%= bike.brand %></h6>
                     <h6><label>Model: </label> <%= bike.model %></h6>
                     <h6><label>Is Missing: </label> <%= bike.is_stolen %></h6>
-
-                    <%= link_to "Edit Bike", bike_path(bike), method: :update, class: 'btn btn-primary btn-sm' %>
-                    <!--<a class="btn btn-primary btn-sm" href='/bike/<%= bike.id %>/edit'>Edit</a>-->
+                    
+                    <a class="btn btn-primary btn-sm" href='/bike/<%= bike.id %>/edit'>Edit</a>
                     <%= link_to "Delete Bike", bike_path(bike), method: :delete, class: 'btn btn-danger btn-sm' %>
                 </div>
             </div>
