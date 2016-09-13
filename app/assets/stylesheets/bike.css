@@ -141,10 +141,24 @@ transform: skewY(20deg);
     text-align: center;
 }
 
+.page-heading {
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+/* Styles for forms */
+
+.form-section {
+    width: 50%;
+    padding-bottom: 30px;
+
+}
+
 /* Styles for user profile page */
 
 .user-bikes {
-    border: 2px solid #66CCFF;
+    /*border: 2px solid #66CCFF;*/
     padding: 10px;
     margin: 20px;
     border-radius: 5px;

@@ -1,26 +1,41 @@
-<div class="container well">
-    <h1>Enter your info</h1>
+<div class="container">
 
-    <%= form_for :user do |form| %>
+    <div class="page-heading mui--text-light mui--text-display1">
+        Sign up
+    </div>
 
-        <div class="md-form">
-            <%= form.text_field :name, class: 'form-control', id: 'name' %>
-            <%= form.label :name, class: '', for: 'name' %>
+    <div class="form-section panel container" style="padding-top: 20px; text-align: left;">
+
+        <%= form_for :user do |form| %>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mui-textfield">
+                    <%= form.text_field :name, class: '', id: 'name' %>
+                    <%= form.label :name, class: '', for: 'name' %>
+                </div>
+            </div>
         </div>
 
-        <div class="md-form">
-            <%= form.text_field :email, class: 'form-control', id: 'email' %>
-            <%= form.label :email, class: '', for: 'email' %>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mui-textfield">
+                    <%= form.text_field :email, class: 'f', id: 'email' %>
+                    <%= form.label :email, class: '', for: 'email' %>
+                </div>
+            </div>
         </div>
 
-        <div class="md-form">
-            <%= form.text_field :password, class: 'form-control', id: 'password' %>
-            <%= form.label :password, class: '', for: 'password' %>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mui-textfield">
+                    <%= form.password_field :password, class: '', id: 'password' %>
+                    <%= form.label :password, class: '', for: 'password' %>
+                </div>
+            </div>
         </div>
 
-        <div class="md-form">
-            <%= form.submit 'SIGN UP', :class => 'btn btn-primary' %>
-        </div>
-
-    <%end%>
+        <%= form.submit 'SIGN UP', :class => 'mui-btn mui-btn--primary' %>
+        <%end%>
+    </div>
 </div>

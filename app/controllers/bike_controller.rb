@@ -1,7 +1,27 @@
 class BikeController < ApplicationController
+  # require the gems we need
+  require 'rest-client'
+  require 'nokogiri'
+
   before_action :current_user, :is_authenticated
+
   def show
      @bike = Bike.find(params[:id])
+    #request data
+    response = RestClient.get("https://seattle.craigslist.org/search/bia")
+    html = response.body
+    #give Nokogiri your file
+    data = Nokogiri::HTML(html)
+    ##select data using CSS selectors
+    titleArr = []
+    linkArr = []
+    data.css("a.hdrlnk:contains('#{@bike.brand}')", "a.hdrlnk:contains('#{@bike.model}')", "a.hdrlnk:contains('#{@bike.color_primary}')").each do |title|
+      titleArr = titleArr.push(title.text)
+      @titles = titleArr
+
+      linkArr = linkArr.push(title.attr('href'))
+      @links = linkArr
+    end
   end
 
   def new

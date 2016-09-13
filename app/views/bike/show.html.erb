@@ -7,7 +7,7 @@
 
         <div class="col-md-1"></div>
 
-        <div class="col-md-7 well" id="bike-info" style="text-align: left;">
+        <div class="col-md-7 panel" id="bike-info" style="text-align: left;">
 
             <h3>
                 <label>Brand:</label>
@@ -66,6 +66,9 @@
         </div>
 
     </div>
+    <%if @bike.is_stolen == true%>
+    <%= render "partials/sitewide_assets/craigslist" %>
+    <%end%>
 
 
 </div>
