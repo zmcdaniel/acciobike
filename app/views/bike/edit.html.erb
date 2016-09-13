@@ -9,74 +9,96 @@
             <div class="mui-textfield ">
                 <%= form.label :brand %>
                 <%= form.text_field :brand %>
-                </div></div></div>
-<br><br>
-<%= form.label :model %>
-<%= form.text_field :model %>
-<br><br>
-<%= form.label :serialnumber %>
-<br>
-<%= form.text_field :serial_num %>
+                </div>
+        </div>
 
+        <div class="col-md-6">
+            <div class="mui-textfield">
+                <%= form.label :model %>
+                <%= form.text_field :model %>
+            </div>
+        </div>
+    </div>
 
-<br><br>
-<br><br>
-<%= form.label :Primarycolor %>
-<%= form.select :color_primary, [['Red','red'],
-                                ['Dark Red', 'dark red'],
-                                ['Light Red', 'light red'],
-                                ['Blue','blue'],
-                                ['Dark Blue','dark blue'],
-                                ['Light Blue','light blue'],
-                                ['Green','green'],
-                                ['Dark Green','dark green'],
-                                ['Light Green','light green'],
-                                ['Yellow','yellow'],
-                                ['Orange','orange'],
-                                ['White','white'],
-                                ['Black', 'black'],
-                                ['Grey','grey'],
-                                ['Purple','purple']] %>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mui-textfield">
+                <%= form.text_field :serial_num %>
+                <%= form.label :serial_number %>
+            </div>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mui-select">
+                <%= form.label :Primary_color %>
+                <%= form.select :color_primary, [
+                ['None', 'none'],
+                ['Red','red'],
+                ['Dark Red', 'dark red'],
+                ['Light Red', 'light red'],
+                ['Blue','blue'],
+                ['Dark Blue','dark blue'],
+                ['Light Blue','light blue'],
+                ['Green','green'],
+                ['Dark Green','dark green'],
+                ['Light Green','light green'],
+                ['Yellow','yellow'],
+                ['Orange','orange'],
+                ['White','white'],
+                ['Black', 'black'],
+                ['Grey','grey'],
+                ['Purple','purple']] %>
+            </div>
+        </div>
 
+        <div class="col-md-4">
+            <div class="mui-select">
+                <%= form.label :Secondary_color %>
+                <%= form.select :color_secondary, [
+                ['None', 'none'],
+                ['Red','red'],
+                ['Dark Red', 'dark red'],
+                ['Light Red', 'light red'],
+                ['Blue','blue'],
+                ['Dark Blue','dark blue'],
+                ['Light Blue','light blue'],
+                ['Green','green'],
+                ['Dark Green','dark green'],
+                ['Light Green','light green'],
+                ['Yellow','yellow'],
+                ['Orange','orange'],
+                ['White','white'],
+                ['Black', 'black'],
+                ['Grey','grey'],
+                ['Purple','purple']] %>
+            </div>
+        </div>
 
-<br><br>
-<%= form.label :Secondcolor %>
-<%= form.select :color_secondary, [['Red','red'],
-                                ['Dark Red', 'dark red'],
-                                ['Light Red', 'light red'],
-                                ['Blue','blue'],
-                                ['Dark Blue','dark blue'],
-                                ['Light Blue','light blue'],
-                                ['Green','green'],
-                                ['Dark Green','dark green'],
-                                ['Light Green','light green'],
-                                ['Yellow','yellow'],
-                                ['Orange','orange'],
-                                ['White','white'],
-                                ['Black', 'black'],
-                                ['Grey','grey'],
-                                ['Purple','purple']] %>
-
-<br><br>
-<%= form.label :Thirdcolor %>
-<%= form.select :color_tertiary, [['Red','red'],
-                                ['Dark Red', 'dark red'],
-                                ['Light Red', 'light red'],
-                                ['Blue','blue'],
-                                ['Dark Blue','dark blue'],
-                                ['Light Blue','light blue'],
-                                ['Green','green'],
-                                ['Dark Green','dark green'],
-                                ['Light Green','light green'],
-                                ['Yellow','yellow'],
-                                ['Orange','orange'],
-                                ['White','white'],
-                                ['Black', 'black'],
-                                ['Grey','grey'],
-                                ['Purple','purple']] %>
-
-
+        <div class="col-md-4">
+            <div class="mui-select">
+                <%= form.label :Tertiary_color %>
+                <%= form.select :color_tertiary, [
+                ['None', 'none'],
+                ['Red','red'],
+                ['Dark Red', 'dark red'],
+                ['Light Red', 'light red'],
+                ['Blue','blue'],
+                ['Dark Blue','dark blue'],
+                ['Light Blue','light blue'],
+                ['Green','green'],
+                ['Dark Green','dark green'],
+                ['Light Green','light green'],
+                ['Yellow','yellow'],
+                ['Orange','orange'],
+                ['White','white'],
+                ['Black', 'black'],
+                ['Grey','grey'],
+                ['Purple','purple']] %>
+            </div>
+        </div>
+    </div>
 
 
 <br><br>
