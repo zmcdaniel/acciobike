@@ -4,6 +4,9 @@
 
     <h1>Add a bike</h1>
 
+    <hr>
+    <h3>Information</h3>
+
     <div class="row">
         <div class="col-md-6">
             <div class="mui-textfield">
@@ -28,6 +31,9 @@
             </div>
         </div>
     </div>
+
+    <hr>
+    <h3>Appearance</h3>
 
     <div class="row">
         <div class="col-md-4">
@@ -103,8 +109,8 @@
     <div class="row">
         <div class="col-md-12">
             <div class="mui-textfield">
-                <%= form.label :photo %>
-                <%= form.file_field :photo, class: 'mui-btn' %>
+                <%= form.text_area :description, class: '', id: 'description', placeholder: 'Has a Georgetown Brewing Company sticker on downtube, scratch on front fork, pink tassles on handlebars. Was locked up at 3rd and University bike rack when Kryptonite U-lock was snipped between 1pm and 3pm.' %>
+                <%= form.label :description, class: '', for: 'description' %>
             </div>
         </div>
     </div>
@@ -112,11 +118,15 @@
     <div class="row">
         <div class="col-md-12">
             <div class="mui-textfield">
-                <%= form.text_area :description, class: '', id: 'description', placeholder: 'Has a Georgetown Brewing Company sticker on downtube, scratch on front fork, pink tassles on handlebars. Was locked up at 3rd and University bike rack when Kryptonite U-lock was snipped between 1pm and 3pm.' %>
-                <%= form.label :description, class: '', for: 'description' %>
+                <%= form.label :photo %>
+                <%= form.file_field :photo, class: 'mui-btn' %>
             </div>
         </div>
     </div>
+
+
+    <hr>
+    <h3>Missing Status</h3>
 
     <div class="row" id="stolen-section">
         <div class="col-md-6" style="padding-left: 70px;">
@@ -148,10 +158,8 @@
                         <%= form.label :stolen_date %>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <div class="row" style="text-align: center; padding-top: 50px;">

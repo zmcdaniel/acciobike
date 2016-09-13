@@ -2,7 +2,10 @@
 
     <%= form_for @bike do |form| %>
 
-    <h1>Edit bike info</h1>
+    <h1>Edit</h1>
+
+    <hr>
+    <h3>Information</h3>
 
     <div class="row">
         <div class="col-md-6">
@@ -28,6 +31,9 @@
             </div>
         </div>
     </div>
+
+    <hr>
+    <h3>Appearance</h3>
 
     <div class="row">
         <div class="col-md-4">
@@ -101,25 +107,65 @@
     </div>
 
 
-<br><br>
-<%= form.radio_button(:is_stolen, true) %>
-<%= form.label(:bike_true, "My bike was stolen") %>
-<%= form.radio_button(:is_stolen, false) %>
-<%= form.label(:bike_false, "My bike was not stolen") %>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mui-textfield">
+                <%= form.text_area :description, class: '', id: 'description', placeholder: 'Has a Georgetown Brewing Company sticker on downtube, scratch on front fork, pink tassles on handlebars. Was locked up at 3rd and University bike rack when Kryptonite U-lock was snipped between 1pm and 3pm.' %>
+                <%= form.label :description, class: '', for: 'description' %>
+            </div>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mui-textfield">
+                <%= form.label :photo %>
+                <%= form.file_field :photo, class: 'mui-btn' %>
+            </div>
+        </div>
+    </div>
 
-<span class="photoInput">
-  <br><br>
-  <%= form.label :photo %>
-  <%= form.file_field :photo %>
-</span>
+    <hr>
+    <h3>Missing Status</h3>
 
-<br><br>
-<%= form.label :description %>
-<br>
-<%= form.text_area :description %>
-<br><br>
-<%= form.submit %>
-<%end%>
+    <div class="row" id="stolen-section">
+        <div class="col-md-6" style="padding-left: 70px;">
+            <div class="mui-textfield">
+                <div class="row mui-radio" style="position: absolute; top: 0; display: block; width: 100%; color: rgba(0,0,0,.54); font-size: 12px; font-weight: 400; line-height: 15px; overflow-x: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                    <%= form.radio_button(:is_stolen, true, {:class => "true_clicked" }) %>
+                    <%= form.label(:bike_true, "My bike was stolen") %>
+                </div>
+                <div class="row mui-radio" style="position: absolute; top: 0; display: block; width: 100%; color: rgba(0,0,0,.54); font-size: 12px; font-weight: 400; line-height: 15px; overflow-x: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                    <%= form.radio_button(:is_stolen, false, {:class => "false_clicked"}) %>
+                    <%= form.label(:bike_false, "My bike was not stolen", class: '', for: 'is_stolen') %>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="stolen_form" style="display: none">
+
+                <div class="row">
+                    <div class="mui-textfield">
+                        <%= form.text_field :stolen_zip, class: '', id: 'stolen_zip' %>
+                        <%= form.label :stolen_zip %>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mui-textfield">
+                        <%= form.text_field :stolen_date, class: '', id: 'stolen_date', placeholder: '01/01/16' %>
+                        <%= form.label :stolen_date %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="text-align: center; padding-top: 50px;">
+        <%= form.submit 'Register', :class => 'mui-btn mui-btn--primary' %>
+    </div>
+
+    <%end%>
 
 </div>
