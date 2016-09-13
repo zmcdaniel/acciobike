@@ -7,8 +7,8 @@
 
         <hr>
 
-        <a class="btn btn-primary btn-sm" href='#'>Edit Info</a>
-        <a class="btn btn-primary btn-sm" href='/logout'>Log Out</a>
+        <a class="mui-btn mui-btn--primary mui-btn--small" href='#'>Edit Info</a>
+        <a class="mui-btn mui-btn--primary mui-btn--small" href='/logout'>Log Out</a>
     </div>
 
     <div class='col-md-1'></div>
@@ -20,7 +20,7 @@
 
         <% @bikes.each do |bike| %>
 
-        <div class="user-bikes">
+        <div class="mui-panel user-bikes">
             <div class="row">
 
                 <div class="col-md-6">
@@ -34,8 +34,8 @@
                     <h6><label>Is Missing: </label> <%= bike.is_stolen %></h6>
 
 
-                    <a class="btn btn-primary btn-sm" href='/bike/<%= bike.id %>/edit'>Edit</a>
-                    <%= link_to "Delete Bike", bike_path(bike), method: :delete, class: 'btn btn-danger btn-sm' %>
+                    <a class="mui-btn mui-btn--primary mui-btn--flat mui-btn--small" href='/bike/<%= bike.id %>/edit'>Edit</a>
+                    <%= link_to "Delete Bike", bike_path(bike), method: :delete, class: 'mui-btn mui-btn--danger mui-btn--flat mui-btn--small' %>
                 </div>
             </div>
         </div>
