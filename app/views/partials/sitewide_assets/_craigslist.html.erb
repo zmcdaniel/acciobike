@@ -1,13 +1,14 @@
 <div class="col-md-5"></div>
+
 <div class="col-md-7 panel" id="craigslist-info" style="text-align: left;">
-  <%if @titles != nil%>
+    <%if @titles != nil%>
     <h4>Possible Craigslist matches</h4>
-        <ul>
-            <% 5.times do |i|%>
-            <li><a href="https://seattle.craigslist.org<%=@links[i] %>"><%=@titles[i]%></a></li>
-            <%end%>
-        </ul>
-   <%else%>
-    <h3>No matches on craigslist :(</h3> 
-  <%end%>
+    <ul>
+        <% 5.times do |i|%>
+        <li><a href="https://seattle.craigslist.org<%=@links[i] %>"><%=@titles[i]%></a></li>
+        <%end%>
+    </ul>
+    <%else%>
+    <h3> No matches on craigslist :(</h3>
+    <%end%>
 </div>
