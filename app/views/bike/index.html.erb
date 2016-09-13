@@ -1,106 +1,176 @@
-<div class="bikeForm">
-
-    <h1>Add a bike</h1>
+<div class="bikeForm container">
 
     <%= form_for :bike do |form| %>
-    <%= form.label :brand %>
-    <%= form.text_field :brand %>
-    <br><br>
-    <%= form.label :model %>
-    <%= form.text_field :model %>
-    <br><br>
-    <%= form.label :serialnumber %>
-    <br>
-    <%= form.text_field :serial_num %>
 
+    <div class="page-heading mui--text-light mui--text-display1">Add a bike</div>
 
-    <br><br>
-    <%= form.label :Primarycolor %>
-    <%= form.select :color_primary, [['Red','red'],
-                                ['Dark Red', 'dark red'],
-                                ['Light Red', 'light red'],
-                                ['Blue','blue'],
-                                ['Dark Blue','dark blue'],
-                                ['Light Blue','light blue'],
-                                ['Green','green'],
-                                ['Dark Green','dark green'],
-                                ['Light Green','light green'],
-                                ['Yellow','yellow'],
-                                ['Orange','orange'],
-                                ['White','white'],
-                                ['Black', 'black'],
-                                ['Grey','grey'],
-                                ['Purple','purple']] %>
+    <div class="form-section panel container">
+        <h3>Information</h3>
 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mui-textfield">
+                    <%= form.text_field :brand, class: '', id: 'brand' %>
+                    <%= form.label :brand, class: '', for: 'brand' %>
+                </div>
+            </div>
 
+            <div class="col-md-6">
+                <div class="mui-textfield">
+                    <%= form.text_field :model, class: '', id: 'model' %>
+                    <%= form.label :model, class: '', for: 'model' %>
+                </div>
+            </div>
+        </div>
 
-    <br><br>
-    <%= form.label :Secondcolor %>
-    <%= form.select :color_secondary, [['Red','red'],
-                                ['Dark Red', 'dark red'],
-                                ['Light Red', 'light red'],
-                                ['Blue','blue'],
-                                ['Dark Blue','dark blue'],
-                                ['Light Blue','light blue'],
-                                ['Green','green'],
-                                ['Dark Green','dark green'],
-                                ['Light Green','light green'],
-                                ['Yellow','yellow'],
-                                ['Orange','orange'],
-                                ['White','white'],
-                                ['Black', 'black'],
-                                ['Grey','grey'],
-                                ['Purple','purple']] %>
-
-    <br><br>
-    <%= form.label :Thirdcolor %>
-    <%= form.select :color_tertiary, [['Red','red'],
-                                ['Dark Red', 'dark red'],
-                                ['Light Red', 'light red'],
-                                ['Blue','blue'],
-                                ['Dark Blue','dark blue'],
-                                ['Light Blue','light blue'],
-                                ['Green','green'],
-                                ['Dark Green','dark green'],
-                                ['Light Green','light green'],
-                                ['Yellow','yellow'],
-                                ['Orange','orange'],
-                                ['White','white'],
-                                ['Black', 'black'],
-                                ['Grey','grey'],
-                                ['Purple','purple']] %>
-
-
-
-
-    <br><br>
-    <%= form.radio_button(:is_stolen, true, {:class => "true_clicked"}) %>
-    <%= form.label(:bike_true, "My bike was stolen") %>
-    <%= form.radio_button(:is_stolen, false, {:class => "false_clicked"}) %>
-    <%= form.label(:bike_false, "My bike was not stolen") %>
-
-    <div class="stolen_form" style="display: none">
-        <br>
-        <%= form.label :stolen_zip %>
-        <br>
-        <%= form.text_field :stolen_zip %>
-        <br><br>
-        <%= form.label :stolen_date %>
-        <br>
-        <%= form.text_field :stolen_date %>
-        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mui-textfield">
+                    <%= form.text_field :serial_num, class: '', id: 'serial_num' %>
+                    <%= form.label :serial_number, class: '', for: 'serial_num' %>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <br><br>
-    <%= form.label :photo %>
-    <%= form.file_field :photo %>
+    <div class="form-section panel container">
+        <h3>Appearance</h3>
 
-    <br><br>
-    <%= form.label :description %>
-    <br>
-    <%= form.text_area :description %>
-    <br><br>
-    <%= form.submit %>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mui-select">
+                    <%= form.label :Primary_color %>
+                    <%= form.select :color_primary, [
+                    ['None', 'none'],
+                    ['Red','red'],
+                    ['Dark Red', 'dark red'],
+                    ['Light Red', 'light red'],
+                    ['Blue','blue'],
+                    ['Dark Blue','dark blue'],
+                    ['Light Blue','light blue'],
+                    ['Green','green'],
+                    ['Dark Green','dark green'],
+                    ['Light Green','light green'],
+                    ['Yellow','yellow'],
+                    ['Orange','orange'],
+                    ['White','white'],
+                    ['Black', 'black'],
+                    ['Grey','grey'],
+                    ['Purple','purple']] %>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="mui-select">
+                    <%= form.label :Secondary_color %>
+                    <%= form.select :color_secondary, [
+                    ['None', 'none'],
+                    ['Red','red'],
+                    ['Dark Red', 'dark red'],
+                    ['Light Red', 'light red'],
+                    ['Blue','blue'],
+                    ['Dark Blue','dark blue'],
+                    ['Light Blue','light blue'],
+                    ['Green','green'],
+                    ['Dark Green','dark green'],
+                    ['Light Green','light green'],
+                    ['Yellow','yellow'],
+                    ['Orange','orange'],
+                    ['White','white'],
+                    ['Black', 'black'],
+                    ['Grey','grey'],
+                    ['Purple','purple']] %>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="mui-select">
+                    <%= form.label :Tertiary_color %>
+                    <%= form.select :color_tertiary, [
+                    ['None', 'none'],
+                    ['Red','red'],
+                    ['Dark Red', 'dark red'],
+                    ['Light Red', 'light red'],
+                    ['Blue','blue'],
+                    ['Dark Blue','dark blue'],
+                    ['Light Blue','light blue'],
+                    ['Green','green'],
+                    ['Dark Green','dark green'],
+                    ['Light Green','light green'],
+                    ['Yellow','yellow'],
+                    ['Orange','orange'],
+                    ['White','white'],
+                    ['Black', 'black'],
+                    ['Grey','grey'],
+                    ['Purple','purple']] %>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mui-textfield">
+                    <%= form.text_area :description, class: '', id: 'description' %>
+                    <%= form.label :description_and_cosmetic_details, class: '', for: 'description' %>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mui-textfield">
+                    <%= form.label :photo %>
+                    <%= form.file_field :photo, class: 'mui-btn' %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section panel container">
+        <h3>Missing Status</h3>
+
+        <div class="row" id="stolen-section">
+            <div class="col-md-6" style="padding-left: 70px;">
+                <div class="mui-textfield">
+                    <div class="row mui-radio"
+                         style="position: absolute; top: 0; display: block; width: 100%; color: rgba(0,0,0,.54); font-size: 12px; font-weight: 400; line-height: 15px; overflow-x: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                        <%= form.radio_button(:is_stolen, true, {:class => "true_clicked" }) %>
+                        <%= form.label(:bike_true, "My bike was stolen") %>
+                    </div>
+                    <div class="row mui-radio"
+                         style="position: absolute; top: 0; display: block; width: 100%; color: rgba(0,0,0,.54); font-size: 12px; font-weight: 400; line-height: 15px; overflow-x: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                        <%= form.radio_button(:is_stolen, false, {:class => "false_clicked"}) %>
+                        <%= form.label(:bike_false, "My bike was not stolen", class: '', for: 'is_stolen') %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="stolen_form" style="display: none">
+
+                    <div class="row">
+                        <div class="mui-textfield">
+                            <%= form.text_field :stolen_zip, class: '', id: 'stolen_zip' %>
+                            <%= form.label :stolen_zip %>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mui-textfield">
+                            <%= form.text_field :stolen_date, class: '', id: 'stolen_date', placeholder: '01/01/16' %>
+                            <%= form.label :stolen_date %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="text-align: center; padding-top: 50px;">
+        <%= form.submit 'Register', :class => 'mui-btn mui-btn--primary' %>
+    </div>
+
     <%end%>
+
 
 </div>

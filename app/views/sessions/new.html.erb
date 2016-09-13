@@ -1,30 +1,32 @@
-<!--<h1>Login</h1>-->
+<div class="container">
 
-<!--<%= form_for :user do |f| %>-->
-  <!--<%= f.email_field :email, placeholder: "Enter your email" %>-->
-  <!--<%= f.password_field :password, placeholder: "Enter your password" %>-->
-  <!--<%= f.submit "Login" %>-->
-<!--<% end %>-->
-
-
-<div class="container well">
-    <h1>Login</h1>
-
-    <%= form_for :user do |form| %>
-
-    <div class="md-form">
-        <%= form.text_field :email, class: 'form-control', id: 'email' %>
-        <%= form.label :email, class: '', for: 'email' %>
+    <div class="page-heading mui--text-light mui--text-display1">
+        Log In
     </div>
 
-    <div class="md-form">
-        <%= form.password_field :password, class: 'form-control', id: 'password' %>
-        <%= form.label :password, class: '', for: 'password' %>
+    <div class="form-section panel container" style="padding-top: 20px; text-align: left;">
+
+        <%= form_for :user do |form| %>
+
+
+        <div class="row" style="text-align: left;">
+            <div class="col-md-6">
+                <div class="mui-textfield">
+                    <%= form.text_field :email, class: '', id: 'email' %>
+                    <%= form.label :email, class: '', for: 'email' %>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mui-textfield">
+                    <%= form.password_field :password, class: '', id: 'password' %>
+                    <%= form.label :password, class: '', for: 'password' %>
+                </div>
+            </div>
+        </div>
+
+            <%= form.submit 'LOG IN', :class => 'mui-btn mui-btn--primary' %>
+        <%end%>
     </div>
 
-    <div class="md-form">
-        <%= form.submit 'LOG IN', :class => 'btn btn-primary' %>
-    </div>
-
-    <%end%>
 </div>
