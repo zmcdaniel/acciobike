@@ -1,21 +1,10 @@
 <div class='container'>
 
-    <div class='col-md-3 well' id='user-info'>
-
-        <h3>Hello, <%= @user.name %></h3>
-        <label>Email: </label> <%= @user.email %>
-
-        <hr>
-
-        <a class="btn btn-primary btn-sm" href='#'>Edit Info</a>
-        <a class="btn btn-primary btn-sm" href='/logout'>Log Out</a>
-    </div>
-
     <div class='col-md-1'></div>
 
     <div class='col-md-7 well' id='user-bikes'>
 
-        <h3>Your registered bikes:</h3>
+        <h3>Searched Bikes:</h3>
 
         <% @bikes.each do |bike| %>
 
@@ -32,9 +21,6 @@
                     <h6><label>Model: </label> <%= bike.model %></h6>
                     <h6><label>Is Missing: </label> <%= bike.is_stolen %></h6>
 
-
-                    <a class="btn btn-primary btn-sm" href='/bike/<%= bike.id %>/edit'>Edit</a>
-                    <%= link_to "Delete Bike", bike_path(bike), method: :delete, class: 'btn btn-danger btn-sm' %>
                 </div>
             </div>
         </div>

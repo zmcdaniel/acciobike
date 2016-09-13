@@ -11,11 +11,13 @@
         </ul>
 
 
-        <form class="navbar-form navbar-right" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-        </form>
+    <div class="navbar-right">
+      <%= form_tag('/results', method: :get) do -%>
+        <div class="form-group">
+          <%= text_field_tag 'search', nil, class: 'form-control' %>
+        </div>
+      <% end -%>
+    </div>
 
     <ul class="nav navbar-nav navbar-right">
       <% if !@current_user %>
