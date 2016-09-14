@@ -1,19 +1,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-'    <nav class="navbar navbar-default" style="background-color: #66CCFF;">
+'    <nav class="navbar navbar-default" style="background-color: #6EC8C0;">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="/" style="color:white">Accio Bike</a>
         </div>
         <ul class="nav navbar-nav">
-          <li style="background-color:#FF8000"><a href="/bike" style="color: white">Register a bike</a></li>
+          <li style="background-color:#D6665A"><a href="/bike" style="color: white">Register a bike</a></li>
           <li><a href="/about" style="color: white">About</a></li>
         </ul>
 
         <div class="navbar-right">
       <%= form_tag('/results', method: :get) do -%>
         <div class="form-group">
-          <%= text_field_tag 'search', nil, style:"margin-top:12.5px;margin-right:5px;margin-left:20px;width:200px;height:25px;border-radius:25px;",  placeholder: "search bikes...", class: 'form-control' %>
+          <%= text_field_tag 'search', nil, style:"margin-top:15px;margin-right:5px;margin-left:20px;width:200px;height:20px;border-radius:25px;color:#D6665A",  placeholder: "search bikes...", class: 'form-control' %>
         </div>
       <% end -%>
     </div>
