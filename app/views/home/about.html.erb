@@ -1,110 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
- <title></title>
- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <style type="text/css"> 
-  body {
-    margin: 0 auto;
-  }
+<div class='container' id="about-page">
 
- .jumbotron {
-  height: 450px;
-  width: 450px;
-  text-align: center;
-  color: #ffffff;
-  background-size: cover;
- }
+  <div class="row well">
 
- #chris-jumbotron {
-    background-image: url('http://res.cloudinary.com/dto1eenjq/image/upload/v1473372104/chrispic_i6gwic.jpg');
- }
-  #jackson-jumbotron {
-    background-image: url('http://res.cloudinary.com/dto1eenjq/image/upload/v1473372076/jacksonpic_r2tfmu.png');
- }
-  #kemal-jumbotron {
-    background-image: url('http://res.cloudinary.com/dto1eenjq/image/upload/v1473372070/kemalbatman_x5hglg.jpg');
- }
-  #zoe-jumbotron {
-    background-image: url('http://res.cloudinary.com/dto1eenjq/image/upload/v1473372079/zoepic_cgmcdl.jpg');
- }
+    <div class='col-md-3'>
+      <a href='chris'>
+        <div class='jumbotron' id='chris-jumbotron'>
+          <h2>Chris</h2>
+        </div>
+      </a>
+    </div>
 
+    <div class='col-md-3'>
+      <a href='jackson'>
+        <div class='jumbotron' id='jackson-jumbotron'>
+          <h2>Jackson</h2>
+        </div>
+      </a>
+    </div>
 
+    <div class='col-md-3'>
+      <a href='kemal'>
+        <div class='jumbotron' id='kemal-jumbotron'>
+          <h2>Kemal</h2>
+        </div>
+      </a>
+    </div>
 
+    <div class='col-md-3'>
+      <a href='zoe'>
+        <div class='jumbotron' id='zoe-jumbotron'>
+          <h2>Zoe</h2>
+        </div>
+      </a>
+    </div>
 
- </style>
-</head>
-<body>
-
-<br>
-<br>
-
-
- <div class='container' id='content'>
-   
-  <div class='col-md-6'>
-    <a href='chris'>
-      <div class='jumbotron' id='chris-jumbotron'>
-        <h1>Chris</h1>
-      </div>
-    </a>
-  </div>
-
-  <div class='col-md-6'>
-    <a href='jackson'>
-      <div class='jumbotron' id='jackson-jumbotron'>
-        <h1>Jackson</h1>
-      </div>
-    </a>
-  </div>
-  <div class='col-md-6'>
-    <a href='kemal'>
-      <div class='jumbotron' id='kemal-jumbotron'>
-        <h1>Kemal</h1>
-      </div>
-    </a>
-  </div>
-  <div class='col-md-6'>
-    <a href='zoe'>
-      <div class='jumbotron' id='zoe-jumbotron'>
-        <h1>Zoe</h1>
-      </div>
-    </a>
   </div>
 
  </div>
-
-<script type="text/javascript" src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
-
-
-<script>
-
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-</script>
-
-
-
-
-
-</body>
-</html>
