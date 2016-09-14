@@ -9,41 +9,40 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
-/* !*Banner Lettering Styles *!
- !*Not working for now -- will attempt to fix later.  *!
+/* !*Banner Lettering Styles */
 h1 {
-margin-top: 100px;
+    margin-top: 20px;
 }
 h1 [class*="word"]{
-margin-right: 10px;
+    margin-right: 10px;
 }
 h1 [class*="word"]:last-child;{
-margin-right: 0;
+    margin-right: 0;
 }
-.test1 [class*="char"]{
-font-family: 'Amatic SC', helvetica, sans-serif;
-background: #D6665A;
-padding: 10px;
-font-size: 60px;
-color: #ffffff;
-display: inline-block;
+.title [class*="char"]{
+    font-family: 'Amatic SC', helvetica, sans-serif;
+    background: #D6665A;
+    padding: 10px;
+    font-size: 60px;
+    color: #ffffff;
+    display: inline-block;
 }
-.test1 [class*="char"]:nth-child(odd){
--moz-transform: skewY(-20deg);
--webkit-transform: skewY(-20deg);
--o-transform: skewY(-20deg);
--ms-transform: skewY(-20deg);
-transform: skewY(-20deg);
+.title [class*="char"]:nth-child(odd){
+    -moz-transform: skewY(-20deg);
+    -webkit-transform: skewY(-20deg);
+    -o-transform: skewY(-20deg);
+    -ms-transform: skewY(-20deg);
+    transform: skewY(-20deg);
 }
-.test1 [class*="char"]:nth-child(even){
-background: #DC9B74;
-color: #ffffff;
--moz-transform: skewY(20deg);
--webkit-transform: skewY(20deg);
--o-transform: skewY(20deg);
--ms-transform: skewY(20deg);
-transform: skewY(20deg);
-}*/
+.title [class*="char"]:nth-child(even){
+    background: #DC9B74;
+    color: #ffffff;
+    -moz-transform: skewY(20deg);
+    -webkit-transform: skewY(20deg);
+    -o-transform: skewY(20deg);
+    -ms-transform: skewY(20deg);
+    transform: skewY(20deg);
+}
 
 /* Bike SVG CSS*/
 .wrapper {
@@ -163,4 +162,34 @@ transform: skewY(20deg);
     margin: 20px;
     border-radius: 5px;
     text-align: left;
+}
+
+/* Styles for the About page */
+
+#about-page {
+    margin: 0 auto;
+}
+
+.jumbotron {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    color: #ffffff;
+    background-size: cover;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px black;
+}
+
+#chris-jumbotron {
+    background-image: url('http://res.cloudinary.com/dto1eenjq/image/upload/v1473372104/chrispic_i6gwic.jpg');
+}
+#jackson-jumbotron {
+    background-image: url('http://res.cloudinary.com/dto1eenjq/image/upload/v1473372076/jacksonpic_r2tfmu.png');
+}
+#kemal-jumbotron {
+    background-image: url('http://res.cloudinary.com/dto1eenjq/image/upload/v1473372070/kemalbatman_x5hglg.jpg');
+}
+#zoe-jumbotron {
+    background-image: url('http://res.cloudinary.com/dto1eenjq/image/upload/v1473372079/zoepic_cgmcdl.jpg');
 }
