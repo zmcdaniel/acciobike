@@ -129,6 +129,11 @@ transform: skewY(20deg);
 
 .bikeForm {
     text-align: left;
+
+}
+
+.photoInput {
+    text-align: center;
 }
 
 #contact-owner {
