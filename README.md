@@ -47,7 +47,10 @@ increase visibility and possibility of recovery.
 
 ## Wireframes
 
-To be added
+In order to save space on github, we have put all our wireframes into an Imgur album. 
+Please copy and paste this link into your browser to see them. 
+
+http://imgur.com/a/IwWNA
 
 ## Approach Taken
 
